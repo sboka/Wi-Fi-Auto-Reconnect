@@ -2,7 +2,7 @@ import os
 import time
 from subprocess import Popen, PIPE
 
-PROFILEDIR=os.path.abspath("C:\WiFiXML")
+PROFILEDIR=os.path.join(os.environ['TMP'], "WiFiXML")
 os.makedirs(PROFILEDIR, exist_ok=True)
 logger = open(os.path.join(PROFILEDIR, "WiFi_logs.txt"), "a")
 
